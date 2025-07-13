@@ -182,6 +182,9 @@ async def update_note(note_id: str, note: Note, current_user: dict = Depends(get
     note.updated_at = datetime.utcnow()
     note_doc = note.dict()
     
+    # Ensure user_id is set correctly and not overwritten by request data
+    note_doc["user_id"] = current_user["id"]
+    
     result = db.notes.update_one(
         {"id": note_id, "user_id": current_user["id"]},
         {"$set": note_doc}
