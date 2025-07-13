@@ -159,7 +159,7 @@ async def login(user: UserLogin):
 async def get_notes(current_user: dict = Depends(get_current_user)):
     notes = list(db.notes.find({"user_id": current_user["id"]}))
     for note in notes:
-        note["id"] = str(note["_id"])
+        # Keep the original UUID id, just remove MongoDB _id
         del note["_id"]
     return notes
 
