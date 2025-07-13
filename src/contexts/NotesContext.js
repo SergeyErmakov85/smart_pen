@@ -1,5 +1,4 @@
-@@ .. @@
-   const fetchNotes = useCallback(async () => {
+const fetchNotes = useCallback(async () => {
      if (!token) return;
 
      setLoading(true);
@@ -16,8 +15,7 @@
      } finally {
        setLoading(false);
      }
--  }, [token, API_URL]);
-+  }, [token, API_URL]);
+   }, [token, API_URL]);
 
    const createNote = useCallback(async (noteData) => {
      if (!token) return;
@@ -42,8 +40,7 @@
      } finally {
        setLoading(false);
      }
--  }, [token, API_URL]);
-+  }, [token, API_URL]);
+   }, [token, API_URL]);
 
    const updateNote = useCallback(async (noteId, noteData) => {
      if (!token) return;
@@ -73,8 +70,7 @@
      } finally {
        setLoading(false);
      }
--  }, [token, currentNote, API_URL]);
-+  }, [token, currentNote, API_URL]);
+   }, [token, currentNote, API_URL]);
 
    const deleteNote = useCallback(async (noteId) => {
      if (!token) return;
@@ -101,8 +97,7 @@
      } finally {
        setLoading(false);
      }
--  }, [token, currentNote, API_URL]);
-+  }, [token, currentNote, API_URL]);
+   }, [token, currentNote, API_URL]);
 
    const searchNotes = useCallback(async (query) => {
      if (!token || !query) return [];
@@ -121,5 +116,4 @@
        console.error('Error searching notes:', err);
        return [];
      }
--  }, [token, API_URL]);
-+  }, [token, API_URL]);
+   }, [token, API_URL]);
