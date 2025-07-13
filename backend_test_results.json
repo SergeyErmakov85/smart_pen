@@ -1,25 +1,25 @@
 {
   "summary": {
-    "passed": 12,
-    "failed": 0,
-    "success_rate": 100.0
+    "passed": 11,
+    "failed": 1,
+    "success_rate": 91.66666666666666
   },
   "detailed_results": [
     {
       "test": "Health Check",
       "success": true,
       "message": "Health endpoint working correctly",
-      "timestamp": "2025-07-13T14:08:07.616065",
+      "timestamp": "2025-07-13T14:08:18.233508",
       "response": {
         "status": "healthy",
-        "timestamp": "2025-07-13T14:08:07.615280"
+        "timestamp": "2025-07-13T14:08:18.232710"
       }
     },
     {
       "test": "User Registration",
       "success": true,
       "message": "User already exists (expected behavior)",
-      "timestamp": "2025-07-13T14:08:08.120525",
+      "timestamp": "2025-07-13T14:08:18.737712",
       "response": {
         "status_code": 400
       }
@@ -28,7 +28,7 @@
       "test": "User Login",
       "success": true,
       "message": "User logged in successfully",
-      "timestamp": "2025-07-13T14:08:08.355032",
+      "timestamp": "2025-07-13T14:08:18.972242",
       "response": {
         "token_type": "bearer"
       }
@@ -37,61 +37,61 @@
       "test": "Invalid Login Test",
       "success": true,
       "message": "Invalid credentials properly rejected",
-      "timestamp": "2025-07-13T14:08:08.859372"
+      "timestamp": "2025-07-13T14:08:19.476195"
     },
     {
       "test": "Unauthorized Access Test",
       "success": true,
       "message": "Protected endpoint properly rejected unauthorized access",
-      "timestamp": "2025-07-13T14:08:09.362356"
+      "timestamp": "2025-07-13T14:08:19.979034"
     },
     {
       "test": "Get Notes (Empty)",
       "success": true,
-      "message": "Retrieved 1 notes successfully",
-      "timestamp": "2025-07-13T14:08:09.867069"
+      "message": "Retrieved 0 notes successfully",
+      "timestamp": "2025-07-13T14:08:20.483610"
     },
     {
       "test": "Create Note",
       "success": true,
-      "message": "Note created successfully with ID: e2511a4e-f013-45a4-8ec7-634cb91cb163",
-      "timestamp": "2025-07-13T14:08:10.372111"
+      "message": "Note created successfully with ID: 32f161d7-c81b-477e-af32-bc6be480474c",
+      "timestamp": "2025-07-13T14:08:20.988590"
     },
     {
       "test": "Get Notes (With Data)",
       "success": true,
-      "message": "Retrieved 2 notes with proper structure",
-      "timestamp": "2025-07-13T14:08:10.876871"
+      "message": "Retrieved 1 notes with proper structure",
+      "timestamp": "2025-07-13T14:08:21.493234"
     },
     {
       "test": "Update Note",
       "success": true,
       "message": "Note updated successfully",
-      "timestamp": "2025-07-13T14:08:11.381972"
+      "timestamp": "2025-07-13T14:08:21.998628"
     },
     {
       "test": "Bluetooth Connect",
       "success": true,
-      "message": "Bluetooth data stored successfully with ID: c8af0df5-aab3-49a1-985c-e65578c89e10",
-      "timestamp": "2025-07-13T14:08:11.886802"
+      "message": "Bluetooth data stored successfully with ID: 042765aa-0bbf-46d8-b6be-9f7f8f10451e",
+      "timestamp": "2025-07-13T14:08:22.503466"
     },
     {
       "test": "Get Bluetooth Data",
       "success": true,
       "message": "Bluetooth data retrieved successfully",
-      "timestamp": "2025-07-13T14:08:12.391502"
+      "timestamp": "2025-07-13T14:08:23.008060"
     },
     {
       "test": "Delete Note",
-      "success": true,
-      "message": "Note deleted successfully",
-      "timestamp": "2025-07-13T14:08:12.900012"
+      "success": false,
+      "message": "No notes available to delete",
+      "timestamp": "2025-07-13T14:08:23.512591"
     },
     {
       "test": "CORS Configuration",
       "success": true,
       "message": "CORS headers present and configured",
-      "timestamp": "2025-07-13T14:08:13.402785"
+      "timestamp": "2025-07-13T14:08:24.015187"
     }
   ]
 }
