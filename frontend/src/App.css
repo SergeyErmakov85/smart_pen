@@ -1,0 +1,40 @@
+/* Additional custom styles */
+.App {
+  text-align: center;
+}
+
+.note-card {
+  @apply bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow cursor-pointer;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+}
+
+.floating-button {
+  @apply fixed bottom-6 right-6 bg-primary-600 text-white p-4 rounded-full shadow-lg hover:bg-primary-700 transition-all;
+}
+
+.floating-button:hover {
+  transform: scale(1.05);
+}
+
+/* Loading states */
+.skeleton {
+  @apply bg-gray-200 rounded animate-pulse;
+}
+
+.skeleton-text {
+  @apply h-4 bg-gray-200 rounded animate-pulse;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .mobile-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  .mobile-padding {
+    @apply p-4;
+  }
+}
