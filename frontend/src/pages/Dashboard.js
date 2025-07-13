@@ -31,8 +31,7 @@ const Dashboard = () => {
     const newNote = {
       title: 'Новая заметка',
       content: '',
-      text_content: '',
-      user_id: user.id
+      text_content: ''
     };
 
     try {
