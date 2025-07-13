@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "passed": 11,
+    "failed": 1,
+    "success_rate": 91.66666666666666
+  },
+  "detailed_results": [
+    {
+      "test": "Health Check",
+      "success": true,
+      "message": "Health endpoint working correctly",
+      "timestamp": "2025-07-13T14:06:08.985432",
+      "response": {
+        "status": "healthy",
+        "timestamp": "2025-07-13T14:06:08.984534"
+      }
+    },
+    {
+      "test": "User Registration",
+      "success": true,
+      "message": "User registered successfully",
+      "timestamp": "2025-07-13T14:06:09.755618",
+      "response": {
+        "token_type": "bearer"
+      }
+    },
+    {
+      "test": "Invalid Login Test",
+      "success": true,
+      "message": "Invalid credentials properly rejected",
+      "timestamp": "2025-07-13T14:06:10.260017"
+    },
+    {
+      "test": "Unauthorized Access Test",
+      "success": true,
+      "message": "Protected endpoint properly rejected unauthorized access",
+      "timestamp": "2025-07-13T14:06:10.763165"
+    },
+    {
+      "test": "Get Notes (Empty)",
+      "success": true,
+      "message": "Retrieved 0 notes successfully",
+      "timestamp": "2025-07-13T14:06:11.268324"
+    },
+    {
+      "test": "Create Note",
+      "success": true,
+      "message": "Note created successfully with ID: 64346532-6740-4805-afe8-4ac6221270b6",
+      "timestamp": "2025-07-13T14:06:11.782904"
+    },
+    {
+      "test": "Get Notes (With Data)",
+      "success": true,
+      "message": "Retrieved 1 notes with proper structure",
+      "timestamp": "2025-07-13T14:06:12.287766"
+    },
+    {
+      "test": "Update Note",
+      "success": true,
+      "message": "Note updated successfully",
+      "timestamp": "2025-07-13T14:06:12.793168"
+    },
+    {
+      "test": "Bluetooth Connect",
+      "success": true,
+      "message": "Bluetooth data stored successfully with ID: 744c4102-a8ff-4d53-a347-d0c89c3903ab",
+      "timestamp": "2025-07-13T14:06:13.307604"
+    },
+    {
+      "test": "Get Bluetooth Data",
+      "success": true,
+      "message": "Bluetooth data retrieved successfully",
+      "timestamp": "2025-07-13T14:06:13.812243"
+    },
+    {
+      "test": "Delete Note",
+      "success": false,
+      "message": "Note deletion failed with status 404: {\"detail\":\"Note not found\"}",
+      "timestamp": "2025-07-13T14:06:14.316836"
+    },
+    {
+      "test": "CORS Configuration",
+      "success": true,
+      "message": "CORS headers present and configured",
+      "timestamp": "2025-07-13T14:06:14.819788"
+    }
+  ]
+}
