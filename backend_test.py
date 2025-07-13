@@ -367,14 +367,26 @@ class SmartPenAPITester:
     
     def test_delete_note(self):
         """Test deleting a note"""
-        if not self.created_note_id:
-            self.log_result("Delete Note", False, "No note ID available for delete test")
-            return False
-            
         try:
+            # First, get the current notes to find a note to delete
             headers = self.get_auth_headers()
+            get_response = requests.get(f"{self.base_url}/notes", headers=headers, timeout=10)
+            
+            if get_response.status_code != 200:
+                self.log_result("Delete Note", False, "Could not retrieve notes for delete test")
+                return False
+            
+            notes = get_response.json()
+            if not notes:
+                self.log_result("Delete Note", False, "No notes available to delete")
+                return False
+            
+            # Use the first note's ID for deletion
+            note_to_delete = notes[0]
+            note_id = note_to_delete["id"]
+            
             response = requests.delete(
-                f"{self.base_url}/notes/{self.created_note_id}",
+                f"{self.base_url}/notes/{note_id}",
                 headers=headers,
                 timeout=10
             )
