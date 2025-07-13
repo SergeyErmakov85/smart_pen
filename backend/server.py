@@ -184,6 +184,8 @@ async def update_note(note_id: str, note: Note, current_user: dict = Depends(get
     
     # Ensure user_id is set correctly and not overwritten by request data
     note_doc["user_id"] = current_user["id"]
+    # Preserve the original note ID
+    note_doc["id"] = note_id
     
     result = db.notes.update_one(
         {"id": note_id, "user_id": current_user["id"]},
