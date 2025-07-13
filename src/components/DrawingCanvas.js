@@ -1,5 +1,4 @@
-@@ .. @@
-   useEffect(() => {
+useEffect(() => {
      // Handle bluetooth stroke data
      if (strokeData.length > 0 && context) {
        strokeData.forEach(data => {
@@ -7,5 +6,4 @@
        });
        clearStrokeData();
      }
--  }, [strokeData, context, clearStrokeData]);
-+  }, [strokeData, context, clearStrokeData, drawPoint]);
+  }, [strokeData, context, clearStrokeData, drawPoint]);
