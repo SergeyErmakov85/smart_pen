@@ -1,0 +1,24 @@
+# Netlify configuration file
+# This file tells Netlify how to build and deploy your site.
+
+# Base build settings
+[build]
+  # The base directory where your frontend code lives.
+  # Netlify will run the build command inside this directory.
+  base = "frontend"
+
+  # The command to build your site.
+  # This comes from the "scripts" section of your frontend/package.json
+  command = "npm run build"
+
+  # The directory that contains the built site.
+  # This is the directory that Netlify will publish.
+  publish = "frontend/build"
+
+# Redirect and rewrite rules are essential for Single Page Applications (SPAs)
+# like the one you have. This rule ensures that navigating directly to
+# a route like /dashboard works correctly.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
