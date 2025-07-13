@@ -39,8 +39,7 @@ const NotePage = () => {
       await updateNote(note.id, {
         title,
         content: canvasData,
-        text_content: extractedText,
-        user_id: note.user_id
+        text_content: extractedText
       });
     } catch (error) {
       console.error('Error saving note:', error);
