@@ -1,5 +1,4 @@
-@@ .. @@
-   const connectToDevice = useCallback(async () => {
+const connectToDevice = useCallback(async () => {
      if (!navigator.bluetooth) {
        throw new Error('Web Bluetooth API не поддерживается в этом браузере');
      }
@@ -55,8 +54,7 @@
      } finally {
        setIsConnecting(false);
      }
--  }, []);
-+  }, [handleDisconnect]);
+  }, [handleDisconnect]);
 
    const handleDisconnect = useCallback(() => {
      setIsConnected(false);
@@ -64,8 +62,7 @@
      setDevice(null);
      setCharacteristic(null);
      console.log('Device disconnected');
--  }, []);
-+  }, []);
+  }, []);
 
    const disconnect = useCallback(async () => {
      if (device && device.gatt.connected) {
@@ -92,5 +89,4 @@
        console.error('Failed to send stroke data:', error);
        throw error;
      }
--  }, [strokeData, device, API_URL]);
-+  }, [strokeData, device, API_URL]);
+  }, [strokeData, device, API_URL]);
