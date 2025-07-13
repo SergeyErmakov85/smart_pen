@@ -60,7 +60,7 @@ class Note(BaseModel):
     text_content: Optional[str] = None  # OCR extracted text
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
-    user_id: str
+    user_id: Optional[str] = None  # Made optional for requests
     google_drive_id: Optional[str] = None
 
 class BluetoothData(BaseModel):
